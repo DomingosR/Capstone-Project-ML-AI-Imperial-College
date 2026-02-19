@@ -31,4 +31,6 @@ In order to determine the optimal trade-off between exploration and exploitation
 
 There have been a couple of approaches mentioned in the course that can be used to potentially weed out regions of the domain and make the search process more efficient.  Among these, I am particularly interested in Support-Vector Machines, which can potentially give me additional useful information regarding which parts of the domain to explore and which ones to ignore.  I hope to be able to implement these improvements soon.
 
-Update (19 Feb 2026): From Version 02, I implement two technical changes.  The first involves preceding the Bayesian Optimization by an SVM estimation that tries to determine if certain regions of the domain seem more promising for exploration.  The second is a dynamic implementation of the parameter kappa, to emphasize greater exploitation as the experiment comes closer to its conclusion.
+**Updates** 
+
+- 19 Feb 2026: From Version 02, I implement two technical changes.  The first involves preceding the Bayesian Optimization by an SVM estimation that tries to determine if certain regions of the domain seem more promising for exploration.  The second is a dynamic implementation of the parameter kappa, to emphasize greater exploitation as the experiment comes closer to its conclusion.
