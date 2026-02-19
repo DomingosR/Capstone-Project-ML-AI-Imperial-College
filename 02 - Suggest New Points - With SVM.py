@@ -1,3 +1,21 @@
+# **********************************************************************
+# Code to suggest new data points for experiments in Imperial College's
+# capstone project.  This code is based on Bayesian Optimization
+# using Upper Confidence Bounds as the objective function.  This Bayesian
+# Optimization is preceded by the estimation of a SVM to determine which
+# regions of the domain seem more promising for exploration, and focus
+3 on those.
+#
+# The current version implements a dynamic value for kappa, the parameter
+# that trades off exploration vs exploitation.  This parameter will change
+# from one week to the next to emphasize greater exploitation over time.
+#
+# The core of this code is due to ChatGPT and Google Gemini.
+#
+# This version: 19 February 2026 
+# Author: Domingos Romualdo
+# **********************************************************************
+
 import numpy as np
 from sklearn.svm import SVC
 from skopt import Optimizer
@@ -94,3 +112,4 @@ for i in range(1, 9):
     suggestedValues.append(tuple(next_x))
 
 print(suggestedValues)
+
